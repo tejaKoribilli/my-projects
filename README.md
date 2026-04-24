@@ -1,43 +1,64 @@
-🚀 Uber Backend Application (Monolith → Microservices Ready)
-A backend system inspired by Uber, built using Spring Boot following a modular monolithic architecture, designed to be easily scalable into microservices.
+# 🚀 Uber Backend Application (Modular Monolith → Microservices Ready)
 
-🧩 Features
-User & Ride Management APIs
-Clean modular structure (User, Ride, Notification modules)
-Secure authentication using JWT
-Email notification system for ride updates (booking, status changes)
-Designed with separation of concerns to support future microservice migration
-⚙️ Tech Stack
-Java 17
-Spring Boot
-REST APIs
-JPA / Hibernate
-MySQL / PostgreSQL
-AWS (EC2, RDS)
-🏗️ Architecture
-This project follows a modular monolith approach:
+A backend system inspired by Uber, built using **Spring Boot**.  
+Designed with a **modular monolithic architecture** that can be easily scaled into microservices in the future.
 
-Each module (User, Ride, Notification) is loosely coupled
-Clear separation of layers (Controller → Service → Repository)
-Designed in a way that each module can be extracted into a separate microservice
-🔔 Notification System
-Implemented an email notification service triggered on key events:
+---
 
-Ride booking confirmation
-Ride status updates
+## 🧩 Features
+
+- 👤 User & Ride Management APIs  
+- 🏗️ Clean modular structure (User, Ride, Notification modules)  
+- 🔐 JWT-based authentication  
+- 📩 Email notification system for ride updates  
+- ⚡ Event-driven internal communication  
+- 🧱 Designed for easy microservice migration  
+
+---
+
+## ⚙️ Tech Stack
+
+- ☕ Java 17  
+- 🌱 Spring Boot  
+- 🔗 REST APIs  
+- 🗄️ Spring Data JPA / Hibernate  
+- 🐬 MySQL / PostgreSQL  
+- ☁️ AWS (EC2, RDS)
+
+---
+
+## 🏗️ Architecture
+
+This project follows a **modular monolith design**:
+
+- Each module (User, Ride, Notification) is independent  
+- Clear layering: `Controller → Service → Repository`  
+- Low coupling between modules  
+- Each module can be extracted into a microservice later  
+
+---
+
+## 🔔 Notification System
+
+Email notifications are triggered on key events:
+
+- Ride booking confirmation  
+- Ride status updates  
+
 Includes:
+- Internal event-based triggers  
+- Reliable email delivery handling  
 
-Event-based triggering within application
-Error handling for reliable delivery
-▶️ How to Run
-Clone the repository
-Configure application properties (database, ports)
-Run the Spring Boot application
-Test APIs using Postman
-📌 Future Improvements
-Split modules into independent microservices
-Introduce API Gateway
-Add messaging queue (Kafka) for async communication
-Implement service discovery (Eureka)
-👨‍💻 Author
-Teja Koribilli Java Full Stack Developer
+---
+
+## ▶️ How to Run
+
+```bash
+# Clone repo
+git clone https://github.com/tejaKoribilli/my-projects.git
+
+# Move into project
+cd my-projects
+
+# Run Spring Boot app
+./mvnw spring-boot:run
